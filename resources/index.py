@@ -1,7 +1,5 @@
 from flask_restful import Resource
-from resources.stock import stock
 
-class index(Resource):
-
+class Index(Resource):
     def get(self):
-        return stock
+        return "Bienvenido a mi tienda de objetos mágicos"

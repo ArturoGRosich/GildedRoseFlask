@@ -1,22 +1,10 @@
-stock = [
-    {
-        "name": "Aged_brie",
-        "quality": 3,
-        "sell_in": 4,
-    },
-    {
-        "name": "Sulfuras",
-        "quality": 80,
-        "sell_in": 0,
-    },
-    {
-        "name": "Aged_brie",
-        "quality": 12,
-        "sell_in": 0,
-    },
-    {
-        "name": "Conjured",
-        "quality": 6,
-        "sell_in": 10,
-    },
-] 
+from flask_restful import Resource
+from services.filters import Filters
+
+class Stock(Resource):
+    def get(self):
+        items = Filters.getStock()
+        stock = []
+        for item in items:
+            stock.append(item)
+        return stock
