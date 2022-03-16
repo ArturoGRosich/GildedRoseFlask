@@ -1,7 +1,7 @@
 from repository.conexionMongoDB import conector_cluster
 
 
-class Filters():
+class Services():
     def getStock():
         items = conector_cluster().Rose.Items.find({},{"_id":False})
         stock = []
