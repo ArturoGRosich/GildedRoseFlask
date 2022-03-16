@@ -1,4 +1,3 @@
-from aiohttp import request
 from flask_restful import Resource, reqparse
 from services.services import Services
 

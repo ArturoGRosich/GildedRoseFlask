@@ -1,6 +1,10 @@
-itemClasses = {"Sulfuras, Hand of Ragnaros": "Sulfuras",
-                             "Aged Brie": "AgedBrie",
-                             "Backstage passes to a TAFKAL80ETC concert": "Backstage",
-                             "Conjured Mana Cake": "ConjuredItem",
-                             "+5 Dexterity Vest": "ConjuredItem",
-                             "Normal Item": "NormalItem"}
+itemClasses =               {"Sulfuras": "Sulfuras",
+                             "Aged brie": "AgedBrie",
+                             "Aged_brie": "AgedBrie",
+                             "Conjured": "Conjured",
+                             "Conjured Mana Cake": "Conjured",
+                             "BackStage":"BackStage",
+                             "Normal Item": "NormalItem",
+                            "Sulfuras, Hand of Ragnaros": "Sulfuras",
+                            "Backstage passes to a TAFKAL80ETC concert": "BackStage"
+                        }       

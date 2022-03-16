@@ -28,7 +28,8 @@ class Item(Updateable):
             self.quality = 0
         if newQuality > 50:
             self.quality = 50
-
+    def toJSON(self):
+        return {"name":self.name, "sell_in":self.sellIn, "quality":self.quality}
 
 class AgedBrie(Item):
     
@@ -82,6 +83,7 @@ class NormalItem(Item):
 class Sulfuras(Item):  
     def __init__(self, name, sellIn, quality):
         super().__init__(name, sellIn, quality)
-    
+        
     def updateQuality(self):
         self.quality = 80
+        self.sellIn = 0
