@@ -8,7 +8,5 @@ api = Api(app, catch_all_404s=True)
 api.add_resource(Index, "/")
 api.add_resource(Stock, "/items")
 
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-    

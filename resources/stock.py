@@ -8,13 +8,21 @@ class Stock(Resource):
         self.parser = reqparse.RequestParser()
         self.parser.add_argument('name', type=str)
         self.parser.add_argument('quality', type=int)
-        self.parser.add_argument('sellIn', type=int)
+        self.parser.add_argument('sell_in', type=int)
+        self.parser = self.limpiarArgs(dict(self.parser.parse_args()))
     
     def get(self):
-        args = dict(self.parser.parse_args())
-        args = self.limpiarArgs(args)
-        return Services.getStock(args)
+        print(self.parser)
+        return Services.getStock(self.parser)
     
+    def post(self):
+        Services.postItem(self.parser)
+        return "all good"
+    
+    def delete(self):
+        Services.deleteItem(self.parser)
+        return self.parser
+
     @staticmethod
     def limpiarArgs(args):
         newArgs = args.copy()

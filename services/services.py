@@ -13,5 +13,8 @@ class Services():
 
     
 
-    def deleteItem(datta):
-        items = conector_cluster().Rose.Items.delete_one(datta,{"_id":False})
+    def postItem(args):
+        conector_cluster().Rose.Items.insert_one(args)
+
+    def deleteItem(args):
+        conector_cluster().Rose.Items.delete_one(args)
